@@ -1,0 +1,40 @@
+body {
+  width: 600px;
+  margin: 0 auto; 
+}
+
+h1 {
+  color: coral;
+  
+}
+  
+img {
+  background-color: green;
+  border: 2px solid mediumblue;
+  width: 400px;
+  height: auto;
+}
+  
+#thirdDiv {
+  width: 400px;
+  height: 600px;
+}
+
+#thirdDiv {
+  background-color: azure;
+}
+ 
+#spanId {
+  margin: 50px;
+  font-size: 18px;
+}
+ 
+#thirdDiv {
+  padding: 50px;
+  border: 2px solid mediumblue;
+}
+ 
+li {
+  color: brown;
+  font-weight: bold;
+}
