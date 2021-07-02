@@ -41,7 +41,7 @@ function capToFront(s) {
 
   var string1 = "";
   var string2 = "";
-   for (var i=0; < s.length; i++) {
+   for (var i=0; i < s.length; i++) {
       if (s[i]=== s[i].toUpperCase()) {
         string1 = string1 + s[i];
       } else {
@@ -49,7 +49,6 @@ function capToFront(s) {
       }
     }
     return string1 + string2;
- 
 }
 
 
@@ -59,6 +58,16 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  var strInv = "";
+  var array = [];
+    for (var i=str.length-1; i>=0; i--) {
+      strInv += str[i];
+    }
+      strInv = strInv.split(" ")  // ["!esolc", si]
+    for (var i=strInv.length-1; i>=0; i--) {
+        array.push(strInv[i]);
+    }
+      return array.join(" ");
 } 
 
 
@@ -67,13 +76,32 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
-}
+  var numeroinvertido = "";
+  var str = numero.toString();
+    for (var i=str.lenght-1; i>=0; i--) {
+      numeroinvertido += str[i];
+    }
+    numeroinvertido = parseInt(numeroinvertido);
+    if (numero === numeroinvertido)  {
+      return "Es capicua";
+    } else {
+      return "No es capicua";
+    } 
+  }
 
 
 function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  var arr = cadena.split("");
+  function  removeItem(arr,item) {
+     var indice = arr.indexOf(item)
+     if (indice !== -1) {
+        arr.splice(indice,1)
+     };
+  }
+
 }
 
 
@@ -81,8 +109,18 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
-}
-
+  var sort = arr.sort(function (a,b){
+    if (a.length > b.length) {
+      return 1;
+    }
+    if (a.length < b.length) {
+       return -1;
+    }
+     return 0;
+    });
+    return sort;
+  }
+  
 
 function buscoInterseccion(arreglo1, arreglo2){
   //Existen dos arrays, cada uno con 5 números. A partir de ello, escribir una función que permita 
