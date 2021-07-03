@@ -10,21 +10,26 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-  var array = [];
+  /*  listo y funciona 
+  var nwarray = [];
     for (var clave in objeto) {
-       array.push([clave,objeto[clave]]);
+       nwarray.push([clave, objeto[clave]]);
     }
-    return array;
-  }
+    return nwarray;
+*/
+// Otro methodo
+  var obj = Object.entries(objeto);
+  return obj;
 
+}
 
 function numberOfCharacters(string) {
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
-  var resultado = [];
-  for (var i=0; i < string.length; i++) {
+  var resultado = {}
+  for (var i=0; i<string.length; i++) {
     if (!resultado[string[i]]) {
       resultado[string[i]]=0;
     }
@@ -42,7 +47,7 @@ function capToFront(s) {
   var string1 = "";
   var string2 = "";
    for (var i=0; i < s.length; i++) {
-      if (s[i]=== s[i].toUpperCase()) {
+      if (s[i] === s[i].toUpperCase()) {
         string1 = string1 + s[i];
       } else {
         string2 = string2 + s[i];
@@ -63,11 +68,11 @@ function asAmirror(str) {
     for (var i=str.length-1; i>=0; i--) {
       strInv += str[i];
     }
-      strInv = strInv.split(" ")  // ["!esolc", si]
+    strInv = strInv.split(" ")  // ["!esolc", si]
     for (var i=strInv.length-1; i>=0; i--) {
         array.push(strInv[i]);
     }
-      return array.join(" ");
+    return array.join(" ");
 } 
 
 
@@ -76,13 +81,13 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
-  var numeroinvertido = "";
+  var numeroInvertido = "";
   var str = numero.toString();
-    for (var i=str.lenght-1; i>=0; i--) {
-      numeroinvertido += str[i];
+    for (var i=str.length-1; i>=0; i--) {
+      numeroInvertido += str[i];
     }
-    numeroinvertido = parseInt(numeroinvertido);
-    if (numero === numeroinvertido)  {
+    numeroInvertido = parseInt(numeroInvertido);
+    if (numero === numeroInvertido)  {
       return "Es capicua";
     } else {
       return "No es capicua";
@@ -94,14 +99,30 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+
   var arr = cadena.split("");
   function  removeItem(arr,item) {
-     var indice = arr.indexOf(item)
+     var indice = arr.indexOf(item);
      if (indice !== -1) {
-        arr.splice(indice,1)
-     };
+        arr.splice(indice,1);
+     }
   }
-
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === "a" || 
+        arr[i] === "b" || 
+        arr[i] === "c") {
+      removeItem(arr,"a");
+      removeItem(arr,"b");
+      removeItem(arr,"c");
+    }
+  } 
+  return arr.join("");
+/*
+ arr = arr.filter(function (el) {
+  return  el !== "a" && el !== "b" && el !== "c";
+  });
+  return arr.join("");
+*/
 }
 
 
@@ -127,6 +148,18 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+  var array = [];
+  for (var i=0; i < arreglo1.length; i++) {
+    for (var j=0; j < arreglo2.length; j++) {
+      if(arreglo1[i] === arreglo2[j]) {
+         array.push(arreglo1[i]);
+      }
+    }
+  }
+  array.sort(function(a, b){
+    return a - b;
+  });
+  return array;
 }
 
 

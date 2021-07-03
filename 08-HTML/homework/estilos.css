@@ -1,22 +1,42 @@
 body {
   width: 600px;
+  max-width: 960px;
   margin: 0 auto; 
   background-image: url("img33.jpg");
-  background-repeat: repeat-x;
-  background-position: 0 0;
-  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.contenedor {
+  width: 600px;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 div {
-    border-bottom: 2px solid #e9e9e9;
-    justify-content: center;
-    align-items: center;
-}
+  max-width: 100%;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}	
 
 h1 {
   color: coral; 
 }
   
+h3 {
+  color: green; 
+}
+
+h4 {
+  color: green; 
+}
+
 img {
   background-color: green;
   border: 2px solid mediumblue;
@@ -26,7 +46,8 @@ img {
   
 #thirdDiv {
   width: 400px;
-  height: 600px;
+  height: 400px;
+  margin: 0 auto;
 }
 
 #thirdDiv {
