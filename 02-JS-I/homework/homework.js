@@ -18,7 +18,7 @@ console.log('Variable Booleana es: ' + nuevoBool);
 //console.log('Variable Resta (10 - 5) es: ' + nuevaResta);
 
 // Resuelve el siguiente problema matemático:
-const nuevaMultiplicacion = 10 * 4 === 40 ;
+const nuevaMultiplicacion = 10 * 4 === 40;
 //const nuevaMultiplicacion = 10 * 4;
 //console.log('Variable Multiplicacion (10 * 4) es: ' + nuevaMultiplicacion);
 

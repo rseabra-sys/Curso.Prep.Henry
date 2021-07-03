@@ -235,7 +235,7 @@ function mayorACien(array) {
   }
   return mayorArray;
 }
-mayorACien([70,50,90,100,200,300,400]);
+mayorACien([70,90,100,200,300,400]);
 
 function breakStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
