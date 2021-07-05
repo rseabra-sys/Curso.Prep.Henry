@@ -1,0 +1,140 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto-Bold.ttf");
+} 
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Light.ttf");
+} 
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto; 
+}
+
+.contenedor {
+  background-color: #f2f2f2;
+  width: 800px;
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 16px;
+
+  display: block; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Datos_personal {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Datos_personal img {
+  width: 100px;
+  height: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Direccion {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Direccion div {
+  margin: 10px;
+  padding: 10px;
+  width: 250px;
+  height: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  
+
+}
+
+.Direccion img {
+  width: 30px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Direccion p {
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+h1 {
+  color: #e62440;
+  font-family: 'Roboto-Bold', Helvetica, sans-serif;
+}
+  
+h3 {
+  color: #4d4d4d;
+  font-family: 'Roboto-Light', Helvetica, sans-serif;
+}
+
+h4 {
+  color:#4d4d4d;
+  font-family: 'Roboto-Medium', Helvetica, sans-serif;
+}
+
+p, li {
+  color:#4d4d4d;
+  font-family: 'Roboto-Regular', Helvetica, sans-serif;
+}
+
+
+#thirdDiv {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+#thirdDiv {
+  background-color: azure;
+}
+ 
+#spanId {
+  margin: 50px;
+  font-size: 18px;
+}
+ 
+#thirdDiv {
+  padding: 50px;
+  border: 2px solid mediumblue;
+}
+ 
+li {
+  color: brown;
+  font-weight: bold;
+}
